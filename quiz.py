@@ -62,7 +62,7 @@ for x in range(0,y):
     if correct[x] == 1:
         print("QUESTION " + str(x+1) + ") CORRECT")
     else:
-        print("QUESTION " + str(x+1) + ") WRONG")
+        print("QUESTION " + str(x+1) + ") INCORRECT")
 
 
 

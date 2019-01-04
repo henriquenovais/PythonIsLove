@@ -26,7 +26,7 @@ else:
 print("SECOND QUESTION")
 
 
-print("Fill in the blank: _________ are characters of chinese origin used in order to convey multiple meanings \n according to the situation.")
+print("_________ are characters of chinese origin used in order to convey multiple meanings \n according to the situation.")
 answer = raw_input("Which group of characters in the japanese writing system matches this description? ")
 answer = answer.lower()
 if answer == "kanji":

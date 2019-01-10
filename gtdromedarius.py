@@ -6,6 +6,12 @@ print("merchants that want you dead. \n \n")
 
 #Main loop control variable
 done = False
+kilometers = 0 #Distance covered by the main character in its camel
+thrist = 0 #Main character's thrist for water
+camel = 0 #Status of the camel
+mercenaries = -20 #Distance between mercenaries and main character
+canteen_drinks = 10 #Number of drinks in the main character's canteen
+
 
 while done == False:
 	print("A. Drink from your canteen")
@@ -20,3 +26,7 @@ while done == False:
 	if choice == "q":
 		done = True
 		print("Closing game ...")
+	elif choice == "e":
+		print("Kilometers traveled: " + kilometers)
+		print("Drinks in your canteen: " + canteen_drinks)
+		print("The mercenaries are " + mercenaries + " miles behind you.")

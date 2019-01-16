@@ -27,6 +27,7 @@ while done == False:
 		done = True
 		print("Closing game ...")
 	elif choice == "e":
-		print("Kilometers traveled: " + kilometers)
-		print("Drinks in your canteen: " + canteen_drinks)
-		print("The mercenaries are " + mercenaries + " miles behind you.")
+		print("Kilometers traveled: " + str(kilometers))
+		print("Drinks in your canteen: " + str(canteen_drinks))
+		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
+

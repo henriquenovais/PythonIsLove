@@ -1,3 +1,6 @@
+#Import library for generating random numbers:
+import random;
+
 #Game introduction
 print("Welcome to GTDromedarius.")
 print("You have stolen a camel from merchants in the desert,")
@@ -19,15 +22,25 @@ while done == False:
 	print("C. Move ahead at full speed")
 	print("D. Stop and rest")
 	print("E. Status check")
-	print("Q. Quit game")
+	print("Q. Quit game \n")
 	choice = input("What is your decision? --> ")
 	choice = choice.lower()
 
-	if choice == "q":
-		done = True
-		print("Closing game ...")
-	elif choice == "e":
+	#Checking player, mercenaries, status:
+	if choice == "e":
 		print("Kilometers traveled: " + str(kilometers))
 		print("Drinks in your canteen: " + str(canteen_drinks))
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
 
+	elif choice =="d":
+		print("You stopped to rest the night.")
+		print("Your camel is now fully rested and is happy.")
+		camel = 0
+		mercenaries = mercenaries + random.randrange(6,15)
+		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
+
+	#Game quitting:
+	elif choice == "q":
+		done = True
+		print("Closing game ...")
+	

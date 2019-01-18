@@ -31,6 +31,21 @@ while done == False:
 		print("Kilometers traveled: " + str(kilometers))
 		print("Drinks in your canteen: " + str(canteen_drinks))
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
+    '''
+	#Going ahead at full-speed:
+	elif choice == "a":
+		mercenaries = mercenaries - random.randrange(9,21) #player travels forward at Full-speed
+		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
+		camel = camel + random.randrange(0,4)
+        thrist = thrist + 1
+		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
+    '''
+    #Going ahead at moderate speed:
+	elif choice == "b":
+		mercenaries = mercenaries - random.randrange(4,13) #player travels forward at moderate speed
+		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
+		camel = camel + 1
+		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
 
 	#Going ahead at full-speed:
 	elif choice == "c":
@@ -50,5 +65,4 @@ while done == False:
 	#Game quitting:
 	elif choice == "q":
 		done = True
-		print("Closing game ...")
-	
+print("Closing game ...")

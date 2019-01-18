@@ -32,11 +32,19 @@ while done == False:
 		print("Drinks in your canteen: " + str(canteen_drinks))
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
 
+	#Going ahead at full-speed:
+	elif choice == "c":
+		mercenaries = mercenaries - random.randrange(9,21) #player travels forward at Full-speed
+		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
+		camel = camel + random.randrange(0,4)
+		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
+
+	#Stop the night:
 	elif choice =="d":
-		print("You stopped to rest the night.")
-		print("Your camel is now fully rested and is happy.")
 		camel = 0
 		mercenaries = mercenaries + random.randrange(6,15)
+		print("You stopped to rest the night.")
+		print("Your camel is now fully rested and is happy.")
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
 
 	#Game quitting:

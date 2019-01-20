@@ -31,15 +31,16 @@ while done == False:
 		print("Kilometers traveled: " + str(kilometers))
 		print("Drinks in your canteen: " + str(canteen_drinks))
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
-    '''
-	#Going ahead at full-speed:
+    
+	#Drink from the canteen:
 	elif choice == "a":
-		mercenaries = mercenaries - random.randrange(9,21) #player travels forward at Full-speed
-		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
-		camel = camel + random.randrange(0,4)
-        thrist = thrist + 1
-		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
-    '''
+		if canteen_drinks <= 0:
+			print("You have no water in your canteen.")
+		else:
+			canteen_drinks = canteen_drinks - 1
+			thrist = thrist - 1
+			print("You drank water from your canteen, your thrist is reduced. \n \n")
+    
     #Going ahead at moderate speed:
 	elif choice == "b":
 		mercenaries = mercenaries - random.randrange(4,13) #player travels forward at moderate speed

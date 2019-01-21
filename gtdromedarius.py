@@ -26,6 +26,14 @@ while done == False:
 	choice = input("What is your decision? --> ")
 	choice = choice.lower()
 
+	#If the player is too thristy:
+	if thrist > 4 and thrist <= 6:
+		print("You are thristy! Drink water from your canteen in order to keep from dehydrating!")
+
+	#If the player does not respect his thrist limit
+	elif thrist > 6:
+		print("You died of thrist!")
+
 	#Checking player, mercenaries, status:
 	if choice == "e":
 		print("Kilometers traveled: " + str(kilometers))
@@ -46,6 +54,7 @@ while done == False:
 		mercenaries = mercenaries - random.randrange(4,13) #player travels forward at moderate speed
 		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
 		camel = camel + 1
+		thrist = thrist + 1
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
 
 	#Going ahead at full-speed:
@@ -53,6 +62,7 @@ while done == False:
 		mercenaries = mercenaries - random.randrange(9,21) #player travels forward at Full-speed
 		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
 		camel = camel + random.randrange(0,4)
+		thrist = thrist + 1
 		print("The mercenaries are " + str(-mercenaries) + " miles behind you. \n \n")
 
 	#Stop the night:

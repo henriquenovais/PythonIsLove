@@ -25,14 +25,12 @@ while done == False:
 	print("Q. Quit game \n")
 	choice = input("What is your decision? --> ")
 	choice = choice.lower()
-
-
-
+def
 	#Checking player, mercenaries, status:
 	if choice == "e":
 		print("Kilometers traveled: " + str(kilometers))
 		print("Drinks in your canteen: " + str(canteen_drinks))
-		print("The mercenaries are " + str(-mercenaries) + " miles behind you. ")
+		print("The mercenaries are " + str(-mercenaries) + " kilometers behind you.")
     
 	#Drink from the canteen:
 	elif choice == "a":
@@ -50,8 +48,8 @@ while done == False:
 		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
 		camel = camel + 1
 		thrist = thrist + 1
-		print("You have traveled: " + str(kilometers) + "kilometers.")
-		print("The mercenaries are " + str(-mercenaries) + " miles behind you. ")
+		print("You have traveled: " + str(kilometers) + " kilometers.")
+		print("The mercenaries are " + str(-mercenaries) + " kilometers behind you. ")
 
 	#Going ahead at full-speed:
 	elif choice == "c":
@@ -60,8 +58,8 @@ while done == False:
 		mercenaries = mercenaries + random.randrange(6,15) #mercenaries travel forward
 		camel = camel + random.randrange(0,4)
 		thrist = thrist + 1
-		print("You have traveled: " + str(kilometers) + "kilometers.")
-		print("The mercenaries are " + str(-mercenaries) + " miles behind you. ")
+		print("You have traveled: " + str(kilometers) + " kilometers.")
+		print("The mercenaries are " + str(-mercenaries) + " kilometers behind you. ")
 
 	#Stop the night:
 	elif choice =="d":
@@ -69,7 +67,7 @@ while done == False:
 		mercenaries = mercenaries + random.randrange(6,15)
 		print("You stopped to rest the night.")
 		print("Your camel is now fully rested and is happy.")
-		print("The mercenaries are " + str(-mercenaries) + " miles behind you. ")
+		print("The mercenaries are " + str(-mercenaries) + " kilometers behind you. ")
 
 	#Game quitting:
 	elif choice == "q":
@@ -91,16 +89,22 @@ while done == False:
 		print("You can see the mercenaries behind you!")
 	elif mercenaries > -1 and mercenaries > -4:
 		print("You can hear the mercenaries behind you! Death draws near.")
+	elif mercenaries >= 0:
+		print("The mercenaries got you. You are dead.")
+		done = True
 
 	if camel >= 5:
 			print("Your camel is getting tired!") 
 	elif camel >= 8:
 			print("Your camel is dead.")
 			print("After walking for hours alone in the desert, the mercenaries found you.")
+			done = True
 
 	if kilometers >= 200:
 		print("After days of travelling, you were finally able to shake off the mercenaries.")
 		print("You live to see another day, at least for now.")
+		done = True
+
 	print("\n \n")
 
 print("Closing game ...")

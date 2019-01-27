@@ -46,7 +46,9 @@ while not done:
     # First, clear the screen to white. Don't put other drawing commands
     # above this, or they will be erased with this command.
     screen.fill(WHITE)
-    pygame.draw.line(screen, RED, [0, 0], [100, 100], 5)
+    pygame.draw.line(screen, RED, [0, 0], [100, 100], 15) #Drawing red line
+    pygame.draw.rect(screen, RED, [500, 50, 170, 170], 0) #Drawing red rectangle
+
  
     # --- Go ahead and update the screen with what we've drawn.
     pygame.display.flip()
@@ -55,5 +57,4 @@ while not done:
     clock.tick(60)
 
 pygame.quit()
-
 

@@ -63,6 +63,10 @@ while not done:
     pygame.draw.arc(screen, BLACK, [450,250,250,200],     0,   PI/2, 2)
     pygame.draw.arc(screen, RED,   [450,250,250,200],3*PI/2,   2*PI, 2)
     pygame.draw.arc(screen, BLUE,  [450,250,250,200],    PI, 3*PI/2, 2)
+    # This draws a triangle using the polygon command
+    # The function detects the polygon based on the number of points declared
+    #The last attribute controls the thickness of the polygon's lines
+    pygame.draw.polygon(screen, BLACK, [[50,200], [50,400], [400,200]], 10)
 
  
     # --- Go ahead and update the screen with what we've drawn.

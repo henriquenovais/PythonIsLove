@@ -46,6 +46,8 @@ while not done:
     # First, clear the screen to white. Don't put other drawing commands
     # above this, or they will be erased with this command.
     screen.fill(WHITE)
+
+    #DRAWING LINES
     pygame.draw.line(screen, RED, [0, 0], [100, 100], 15) #Drawing red line
     pygame.draw.rect(screen, RED, [500, 50, 170, 170], 0) #Drawing red rectangle
     # Draw on the screen several lines from (0, 10) to (100, 110)
@@ -53,20 +55,28 @@ while not done:
     y_offset = 0
     for y_offset in range(0, 100, 10):
         pygame.draw.line(screen,RED,[0,10+y_offset],[100,110+y_offset],5)
+
+    #DRAWING A RECTANGLE
     # Draw a rectangle
     pygame.draw.rect(screen,BLACK,[240,100,250,100],2)
+
+    #DRAWING AN ELLIPSE
     # Draw an ellipse, using a rectangle as the outside boundaries
     pygame.draw.ellipse(screen, BLACK, [200,250,250,100], 2)
+
+    #DRAWING AN ARC
     # Draw an arc as part of an ellipse. Use radians to determine what
     # angle to draw.
     pygame.draw.arc(screen, GREEN, [450,250,250,200],  PI/2,     PI, 2)
     pygame.draw.arc(screen, BLACK, [450,250,250,200],     0,   PI/2, 2)
     pygame.draw.arc(screen, RED,   [450,250,250,200],3*PI/2,   2*PI, 2)
     pygame.draw.arc(screen, BLUE,  [450,250,250,200],    PI, 3*PI/2, 2)
-    # This draws a triangle using the polygon command
+    
+    # DRAWING POLYGONS
     # The function detects the polygon based on the number of points declared
     #The last attribute controls the thickness of the polygon's lines
     pygame.draw.polygon(screen, BLACK, [[50,200], [50,400], [400,200]], 10)
+
 
  
     # --- Go ahead and update the screen with what we've drawn.

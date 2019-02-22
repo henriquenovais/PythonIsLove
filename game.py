@@ -71,11 +71,23 @@ while not done:
     pygame.draw.arc(screen, BLACK, [450,250,250,200],     0,   PI/2, 2)
     pygame.draw.arc(screen, RED,   [450,250,250,200],3*PI/2,   2*PI, 2)
     pygame.draw.arc(screen, BLUE,  [450,250,250,200],    PI, 3*PI/2, 2)
-    
+
     # DRAWING POLYGONS
     # The function detects the polygon based on the number of points declared
     #The last attribute controls the thickness of the polygon's lines
     pygame.draw.polygon(screen, BLACK, [[50,200], [50,400], [400,200]], 10)
+
+    #DRAWING TEXT
+    #Define a font to be used and store it in a variable:
+    #The method requires inputs that define , respectively, font type, size, bolding and italicize.
+    font1 = pygame.font.SysFont('Calibri',40,True,False)
+    # Render the text. "True" means anti-aliased text.
+    # Black is the color. The variable BLACK was defined above as a list of [0, 0, 0]
+    # Note: This line creates an image of the letters, but does not put it on the screen yet.
+    string1 = "CASTLEVANIA"
+    text1 = font1.render("The name of this game is " + string1,False,BLACK)
+    # Put the image of the text on the screen at 250x250
+    screen.blit(text1, [70, 450])
 
 
  

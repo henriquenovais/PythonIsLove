@@ -9,6 +9,7 @@ WHITE    = ( 255, 255, 255)
 GREEN    = (   0, 255,   0)
 RED      = ( 255,   0,   0)
 BLUE     = (   0,   0, 255)
+MUDBROWN = ( 135,  64,   8)
 PI = 3.141592653
 
 #Openning window and setting window size:
@@ -46,8 +47,12 @@ while not done:
     # First, clear the screen to white. Don't put other drawing commands
     # above this, or they will be erased with this command.
     screen.fill(WHITE)
-    #Picture background
-
+    #DRAWING CASTLE CLIFFS
+    #Drawing brown rectangles alongside triangles in order to create two cliffs
+    pygame.draw.rect(screen,MUDBROWN,[0,400,300,400]) #The rectangle is completely filled with color, that's why there's no last argument
+    pygame.draw.rect(screen,MUDBROWN,[1000,400,300,400]) 
+    pygame.draw.polygon(screen,MUDBROWN,[[300,400],[300,800],[400,400]])
+    pygame.draw.polygon(screen,MUDBROWN,[[1000,400],[1000,800],[900,400]])
 
 
  

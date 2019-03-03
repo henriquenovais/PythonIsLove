@@ -11,6 +11,7 @@ RED      = ( 255,   0,   0)
 BLUE     = (   0,   0, 255)
 MUDBROWN = ( 135,  64,   8)
 MIDNIGHTBLUE = ( 25, 25, 112)
+DIMGREY = ( 105, 105, 105)
 PI = 3.141592653
 
 #Openning window and setting window size:
@@ -51,12 +52,19 @@ while not done:
     #DRAWING BACKGROUND
     #Big blue rectangle in order to create the sky
     pygame.draw.rect(screen,MIDNIGHTBLUE,[0,0,1300,1300]) 
-    #DRAWING CASTLE CLIFFS
+    #DRAWING SOIL CLIFFS
     #Drawing brown rectangles alongside triangles in order to create two cliffs
     pygame.draw.rect(screen,MUDBROWN,[0,400,300,400]) #The rectangle is completely filled with color, that's why there's no last argument
     pygame.draw.rect(screen,MUDBROWN,[1000,400,300,400]) 
     pygame.draw.polygon(screen,MUDBROWN,[[300,400],[300,800],[400,400]])
     pygame.draw.polygon(screen,MUDBROWN,[[1000,400],[1000,800],[900,400]])
+    #DRAW CASTLE
+    #Three triangles and one rectangle to create the castle base
+    pygame.draw.polygon(screen,DIMGREY,[[300,300],[500,300],[400,500]]) #Small triangle one
+    pygame.draw.polygon(screen,DIMGREY,[[500,300],[700,300],[600,700]]) #Big triangle
+    pygame.draw.polygon(screen,DIMGREY,[[700,300],[900,300],[800,500]]) #Small triangle two
+    pygame.draw.rect(screen,DIMGREY,[300,280,601,20]) #Rectangle for the castle base
+    #Three rectangle for the castle's towers
 
 
  

@@ -60,11 +60,22 @@ while not done:
     pygame.draw.polygon(screen,MUDBROWN,[[1000,400],[1000,800],[900,400]])
     #DRAW CASTLE
     #Three triangles and one rectangle to create the castle base
-    pygame.draw.polygon(screen,DIMGREY,[[300,300],[500,300],[400,500]]) #Small triangle one
-    pygame.draw.polygon(screen,DIMGREY,[[500,300],[700,300],[600,700]]) #Big triangle
-    pygame.draw.polygon(screen,DIMGREY,[[700,300],[900,300],[800,500]]) #Small triangle two
+    pygame.draw.polygon(screen,DIMGREY,[[300,300],[450,300],[375,400]]) #Small triangle one
+    pygame.draw.polygon(screen,DIMGREY,[[450,300],[750,300],[600,500]]) #Big triangle
+    pygame.draw.polygon(screen,DIMGREY,[[750,300],[900,300],[825,400]]) #Small triangle two
     pygame.draw.rect(screen,DIMGREY,[300,280,601,20]) #Rectangle for the castle base
-    #Three rectangle for the castle's towers
+    #Three rectangles for the castle's towers 
+    pygame.draw.rect(screen,DIMGREY,[300,140,150,145]) #Small tower 1
+    pygame.draw.rect(screen,DIMGREY,[450,80,300,200]) #Big tower 
+    pygame.draw.rect(screen,DIMGREY,[750,140,151,145]) #Small tower 2
+    #Two triangles for the tip of the two small towers
+    pygame.draw.polygon(screen,DIMGREY,[[300,140],[450,140],[375,80]])
+    pygame.draw.polygon(screen,DIMGREY,[[750,140],[900,140],[825,80]])
+    #Five rectangles for the tip of the big tower
+    for x in range(0,10):
+        pygame.draw.rect(screen,DIMGREY,[451+(31*x),70,20,10])
+    
+
 
 
  

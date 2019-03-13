@@ -38,7 +38,31 @@ for x in range(0,10):
 # * * * * * * * * * *
 # * * * * * * * * * *
 #Solution 3:
+'''
 for x in range(0,10):
     print("")
     for y in range(0,10):
         print("*", end=" ")
+'''
+
+#Problem 4
+#Print the following text on screen:
+'''
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+'''
+#Solution 4
+for x in range(0,10):
+    print("")
+    for y in range(0,5):
+        print("*", end=" ")
+    if x == 9:
+        print("")

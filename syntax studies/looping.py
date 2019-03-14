@@ -4,10 +4,11 @@
 #Create loop that prints out the following text:
 # * * * * * * * * * *
 #Solution 1
-'''
+
 for x in range(0,10):
     print("*", end=" ")
-'''
+print("")
+
 #Problem 2
 #Create loop that prints out the following text:
 # * * * * * * * * * *
